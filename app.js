@@ -2,22 +2,30 @@ let audio1 = new Audio('ready-sound/beat-of-time-128705.mp3');
 let audio2 = new Audio('ready-sound/rock-funk-fusion-drum-beat-130bpm-100051.mp3');
 let audio3 = new Audio('ready-sound/synthpop-drum-solo-112bpm-by-prettysleepy-art-15456.mp3');
 
-function demo1() {
+let player = document.getElementById("music");
+
+ function demo1() {
+     player.classList.remove("d-none");
     audio2.pause();
     audio3.pause();
       audio1.play();
-}
+    setTimeout(()=>{ player.classList.add("d-none");}, 10000);
+} 
 
 function demo2() {
+    player.classList.remove("d-none");
     audio1.pause();
     audio3.pause();
       audio2.play();
+      setTimeout(()=>{ player.classList.add("d-none");}, 7000);
 }
 
 function demo3() {
     audio1.pause();
     audio2.pause();
     audio3.play();
+    player.classList.remove("d-none");
+    setTimeout(()=>{ player.classList.add("d-none");}, 104000);
   }  
 
 
