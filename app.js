@@ -1,3 +1,25 @@
+let audio1 = new Audio('ready-sound/beat-of-time-128705.mp3');
+let audio2 = new Audio('ready-sound/rock-funk-fusion-drum-beat-130bpm-100051.mp3');
+let audio3 = new Audio('ready-sound/synthpop-drum-solo-112bpm-by-prettysleepy-art-15456.mp3');
+
+function demo1() {
+    audio2.pause();
+    audio3.pause();
+      audio1.play();
+}
+
+function demo2() {
+    audio1.pause();
+    audio3.pause();
+      audio2.play();
+}
+
+function demo3() {
+    audio1.pause();
+    audio2.pause();
+    audio3.play();
+  }  
+
 
 
   function playAudio(key, audioURL) {
