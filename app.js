@@ -30,8 +30,8 @@ function demo3() {
 
 
 
-  function playAudio(key, audioURL) {
-    const audio = new Audio(audioURL);
+  function playAudio(key, audioURL,audio) {
+    // const audio = new Audio(audioURL);
     audio.play();
   }
   
@@ -52,9 +52,12 @@ function demo3() {
   };
   
   for (const [key, audioURL] of Object.entries(keyAudioMap)) {
+    const audios = new Audio(audioURL);
+    audios.load();
     document.addEventListener("keydown", function(event) {
+
       if (event.key === key) {
-        playAudio(key, audioURL);
+        playAudio(key, audioURL,audios);
       }
     });
   }
